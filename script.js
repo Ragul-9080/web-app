@@ -50,3 +50,6 @@ function generateQuote() {
     document.getElementById("quote").innerText = quoteObj.text;
         document.getElementById("author").innerText = `- ${quoteObj.author}`;
     }
+
+// Call generateQuote on page load
+window.onload = generateQuote;
