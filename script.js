@@ -42,7 +42,11 @@ const quotes = [
 ];
 
 // Function to get a random quote
-function getRandomQuote() {
+function generateQuote() {
     const index = Math.floor(Math.random() * quotes.length);
-    return quotes[index];
-}
+    const quoteObj = quotes[index];
+
+    // Update the HTML
+    document.getElementById("quote").innerText = quoteObj.text;
+        document.getElementById("author").innerText = `- ${quoteObj.author}`;
+    }
